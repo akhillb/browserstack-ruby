@@ -1,0 +1,16 @@
+server: "hub.browserstack.com"
+user: "BROWSERSTACK_USERNAME"
+key: "BROWSERSTACK_ACCESS_KEY"
+
+common_caps:
+  "build": "browserstack-build-1"
+  "name": "BStack parallel test"
+  "debug": true
+
+browser_caps:
+  -
+    "browser": "chrome"
+  -
+    "browser": "firefox"
+  -
+    "browser": "safari"
