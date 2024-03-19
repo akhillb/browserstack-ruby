@@ -47,6 +47,8 @@ caps = [{
  "osVersion" => "10",
  "browserName" => "Chrome",
  "browserVersion" => "120.0",
+ "build" => ENV['BROWSERSTACK_BUILD_NAME'],
+ "name" => ENV['BROWSERSTACK_PROJECT_NAME'],
  "sessionName" => "Github Actions Ruby thread 1"
 },
 {
@@ -54,6 +56,8 @@ caps = [{
  "osVersion" => "Monterey",
  "browserName" => "Safari",
  "browserVersion" => "15.6",
+ "build" => ENV['BROWSERSTACK_BUILD_NAME'],
+ "name" => ENV['BROWSERSTACK_PROJECT_NAME'],
  "sessionName" => "Github Actions Ruby thread 2"
 },
 {
@@ -61,6 +65,8 @@ caps = [{
  "osVersion" => "15",
  "browserName" => "Chromium",
  "deviceOrientation" => "portrait",
+ "build" => ENV['BROWSERSTACK_BUILD_NAME'],
+ "name" => ENV['BROWSERSTACK_PROJECT_NAME'],
  "sessionName" => "Github Actions Ruby thread 3"
 }]
 

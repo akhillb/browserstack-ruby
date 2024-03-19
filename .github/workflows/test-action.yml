@@ -20,8 +20,6 @@ jobs:
         with:
           username: ${{ secrets.BROWSERSTACK_USERNAME }}
           access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-          build-name: 'Testing sample build name'
-          project-name: 'Testing sample project name'
 
       - name: Run tests
         run: bundle exec ruby sample.rb
