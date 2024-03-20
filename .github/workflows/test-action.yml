@@ -22,4 +22,4 @@ jobs:
           access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
 
       - name: Run tests
-        run: bundle exec ruby sample.rb
+        run: bundle exec rake test
