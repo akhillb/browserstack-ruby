@@ -5,7 +5,7 @@ require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new(:single) do |t|
   ENV['CONFIG_NAME'] ||= "single"
   t.pattern = Dir.glob('spec/single_test.rb')
-  t.rspec_opts = '--format documentation --format RspecJunitFormatter --out test_reports/rspec.xml'
+  t.rspec_opts = '--format documentation --format RspecJunitFormatter --out test_reports/single.xml'
   t.verbose = false
 end
 
@@ -14,7 +14,7 @@ task :default => :single
 RSpec::Core::RakeTask.new(:local) do |t|
   ENV['CONFIG_NAME'] ||= "local"
   t.pattern = Dir.glob('spec/local_test.rb')
-  t.rspec_opts = '--format documentation'
+  t.rspec_opts = '--format documentation --format RspecJunitFormatter --out test_reports/local.xml'
   t.verbose = false
 end
 
@@ -35,5 +35,4 @@ task :test do |t, args|
   Rake::Task["single"].invoke
   Rake::Task["single"].reenable
   Rake::Task["local"].invoke
-  Rake::Task["parallel"].invoke
 end
