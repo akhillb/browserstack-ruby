@@ -9,17 +9,8 @@ jobs:
       matrix:
         operating-system: [ubuntu-latest]
     steps:
-      - uses: actions/checkout@v4
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.3'
-          bundler-cache: true
-
       - name: 'Setup Browserstack env'
-        uses: 'akhillb/github-actions/setup-env@akhillb/qd-intg'
+        uses: 'akhillb/github-actions/setup-env@akhillb/to_poc'
         with:
           username: ${{ secrets.BROWSERSTACK_USERNAME }}
           access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-
-      - name: Run tests
-        run: bundle exec rake test
