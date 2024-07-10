@@ -14,3 +14,5 @@ jobs:
         with:
           username: ${{ secrets.BROWSERSTACK_USERNAME }}
           access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+      - name: 'Dump TO variable'
+        run: echo "$BROWSERSTACK_TO_NEW_VARIABLE"
